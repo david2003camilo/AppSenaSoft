@@ -41,6 +41,7 @@
             android:layout_height="200dp"
             android:text="Esta es una pequeña descripcion"
             />
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
