@@ -22,4 +22,9 @@
         android:name="com.sena.appsenasoft.ui.buscador.FragmentBuscador"
         android:label="fragment_view_object"
         tools:layout="@layout/fragment_buscador" />
+    <activity
+        android:id="@+id/viewObjectActivity2"
+        android:name="com.sena.appsenasoft.ui.viewObject.ViewObjectActivity"
+        android:label="activity_view_object"
+        tools:layout="@layout/activity_view_object" />
 </navigation>

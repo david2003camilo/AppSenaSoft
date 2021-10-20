@@ -1,5 +1,6 @@
 package com.sena.appsenasoft.ui.buscador
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import com.sena.appsenasoft.R
 import com.sena.appsenasoft.adaptadores.AdaptadorPublicacion
 import com.sena.appsenasoft.bd.AppBaseDatos
 import com.sena.appsenasoft.databinding.FragmentBuscadorBinding
+import com.sena.appsenasoft.ui.viewObject.ViewObjectActivity
 
 
 class FragmentBuscador : Fragment() {
@@ -39,5 +41,10 @@ class FragmentBuscador : Fragment() {
         binding.rvLista.layoutManager = LinearLayoutManager(view.context)
         adaptador.AdaptadorPublicacion(baseDatos.publicacionDao.buscarPublicacion(), view.context)
         binding.rvLista.adapter = adaptador
+        //TEMPORAL
+        binding.buttonSearch.setOnClickListener {
+            var intent = Intent(view.context,ViewObjectActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
