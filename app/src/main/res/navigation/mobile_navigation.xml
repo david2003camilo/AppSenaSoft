@@ -13,18 +13,10 @@
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.sena.appsenasoft.ui.login.FragmentLogin"
+        android:name="com.sena.appsenasoft.ui.insertar.FragmentInsertar"
         android:label="@string/title_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_navigation_login_to_fragmentRegistrar"
-            app:destination="@id/fragmentRegistrar" />
+        tools:layout="@layout/fragment_insertar" >
     </fragment>
-    <fragment
-        android:id="@+id/fragmentRegistrar"
-        android:name="com.sena.appsenasoft.ui.register.FragmentRegistrar"
-        android:label="fragment_registrar"
-        tools:layout="@layout/fragment_registrar" />
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.sena.appsenasoft.ui.buscador.FragmentBuscador"
