@@ -9,10 +9,8 @@
         android:id="@+id/navigation_search"
         android:icon="@drawable/ic_baseline_search_24"
         android:title="@string/title_search" />
-
     <item
-        android:id="@+id/navigation_login"
-        android:icon="@drawable/ic_baseline_login_24"
-        android:title="@string/title_login" />
-
+        android:id="@+id/navigation_insertar"
+        android:icon="@drawable/insertar"
+        android:title="Insertar" />
 </menu>
