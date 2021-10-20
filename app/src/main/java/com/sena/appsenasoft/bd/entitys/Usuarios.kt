@@ -17,10 +17,6 @@ data class Usuarios (
     var passwordTwo:String,
     @ColumnInfo(name="tipo")
     var tipo:String,
-    @ColumnInfo(name="nombre")
-    var nombre:String,
-    @ColumnInfo(name="apellido")
-    var apellido:String,
     @ColumnInfo(name="username")
     var username:String
         )

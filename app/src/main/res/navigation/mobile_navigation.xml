@@ -13,12 +13,26 @@
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.sena.appsenasoft.ui.login.LoginFragment"
+        android:name="com.sena.appsenasoft.ui.login.FragmentLogin"
         android:label="@string/title_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_fragmentRegistrar"
+            app:destination="@id/fragmentRegistrar" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegistrar"
+        android:name="com.sena.appsenasoft.ui.register.FragmentRegistrar"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" />
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.sena.appsenasoft.ui.objectView.ViewObjectFragment"
-        android:label="@string/title_search"
-        tools:layout="@layout/fragment_view_object" />
+        android:name="com.sena.appsenasoft.ui.buscador.FragmentBuscador"
+        android:label="fragment_view_object"
+        tools:layout="@layout/fragment_buscador" />
+    <activity
+        android:id="@+id/viewObjectActivity2"
+        android:name="com.sena.appsenasoft.ui.viewObject.ViewObjectActivity"
+        android:label="activity_view_object"
+        tools:layout="@layout/activity_view_object" />
 </navigation>

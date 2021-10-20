@@ -2,6 +2,7 @@ package com.sena.appsenasoft.bd.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.Query
 import com.sena.appsenasoft.bd.entitys.Usuarios
 
 @Dao
