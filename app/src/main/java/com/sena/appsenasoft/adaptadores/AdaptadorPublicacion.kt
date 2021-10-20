@@ -1,15 +1,20 @@
 package com.sena.appsenasoft.adaptadores
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.sena.appsenasoft.ControladorImagenPubli
+import com.sena.appsenasoft.MainActivity
 import com.sena.appsenasoft.R
 import com.sena.appsenasoft.bd.entitys.Publicacion
+import com.sena.appsenasoft.ui.viewObject.ViewObjectActivity
 
 
 class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolder>(){
@@ -45,6 +50,9 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        val lista = listaPublicacion[position]
         holder.bind(lista, context)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context, "Mensaje", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun getItemCount(): Int {
