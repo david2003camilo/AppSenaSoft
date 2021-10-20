@@ -6,7 +6,7 @@ import com.sena.appsenasoft.bd.entitys.Publicacion
 @Dao
 interface PublicacionDao {
     @Insert
-    fun insertartPublicacion(publicacion: Publicacion)
+    fun insertartPublicacion(vararg publicacion: Publicacion):List<Long>
     @Update
     fun actualizarPublicacion(publicacion: Publicacion)
     @Delete

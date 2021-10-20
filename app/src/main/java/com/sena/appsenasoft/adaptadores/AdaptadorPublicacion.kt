@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.sena.appsenasoft.ControladorImagenPubli
 import com.sena.appsenasoft.R
 import com.sena.appsenasoft.bd.entitys.Publicacion
 
@@ -22,9 +24,12 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
     class ViewHolder(view:View):RecyclerView.ViewHolder(view) {
         val nombre = view.findViewById(R.id.tvNombreVis) as TextView
         val descripcion = view.findViewById(R.id.tvDescripcion) as TextView
+        val imagen = view.findViewById(R.id.ivImagen) as ImageView
         fun bind(publicacion: Publicacion, context: Context){
             nombre.text = publicacion.nombre
             descripcion.text = publicacion.descripcion
+            val imagenUri = ControladorImagenPubli.getImagenes(context, publicacion.id.toLong())
+            imagen.setImageURI(imagenUri)
         }
     }
     override fun onCreateViewHolder(

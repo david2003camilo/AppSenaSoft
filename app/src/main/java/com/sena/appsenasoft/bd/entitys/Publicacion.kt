@@ -20,7 +20,7 @@ data class Publicacion (
     @ColumnInfo(name="descripcion")
     var descripcion:String,
     @ColumnInfo(name="idUsuarioFK")
-    var idUsuarioFk:String,
+    var idUsuarioFk:Int,
     @ColumnInfo(name="idUbicacionFK")
-    var idUbicacionFk:String
+    var idUbicacionFk:Int
         )

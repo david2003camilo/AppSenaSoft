@@ -6,7 +6,7 @@ import com.sena.appsenasoft.bd.entitys.Servicios
 @Dao
 interface ServiciosDao {
     @Insert
-    fun insertarServicio(servicios: Servicios)
+    fun insertarServicio(vararg servicios: Servicios):List<Long>
     @Update
     fun actualizarServicio(servicios: Servicios)
     @Delete
