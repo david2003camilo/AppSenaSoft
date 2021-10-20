@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.objectView.ViewObjectFragment">
+    tools:context=".ui.buscador.ViewObjectFragment">
 
     <EditText
         android:id="@+id/edit_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="13dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginEnd="13dp"
         android:layout_marginBottom="5dp"
         android:layout_toStartOf="@+id/button" />
 
@@ -25,10 +25,12 @@
         android:layout_marginBottom="5dp"
         app:icon="@drawable/ic_baseline_search_24"
         />
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@id/edit_search"
+        android:id="@+id/rvLista"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/edit_search" />
 
 
 </RelativeLayout>
