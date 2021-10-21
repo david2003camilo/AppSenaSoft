@@ -55,7 +55,7 @@ class ViewObjectActivity : AppCompatActivity() {
             val id = baseDatos.historialDao.insertarHistorial(historial)[0]
             imagenUri.let {
                 ControladorImagenHistorial.guardarImagenes(this, id, it)
-            }
+            }git 
         }
     }
     private fun replaceFragment(fragment: Fragment){
