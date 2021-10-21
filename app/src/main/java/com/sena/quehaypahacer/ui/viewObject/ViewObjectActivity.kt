@@ -1,5 +1,6 @@
 package com.sena.quehaypahacer.ui.viewObject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.room.Room
+import com.huawei.hms.ads.AdParam
+import com.huawei.hms.ads.BannerAdSize
+import com.huawei.hms.ads.banner.BannerView
 import com.sena.quehaypahacer.ControladorImagenPubli
 import com.sena.quehaypahacer.R
 import com.sena.quehaypahacer.adaptadores.AdaptadorPublicacion
@@ -17,6 +21,7 @@ import com.sena.quehaypahacer.bd.entitys.Historial
 import com.sena.quehaypahacer.ui.ControladorImagenHistorial
 import com.sena.quehaypahacer.ui.information.ContactFragment
 import com.sena.quehaypahacer.ui.information.InformationObjectFragment
+import com.sena.quehaypahacer.ui.information.MapActivity
 
 class ViewObjectActivity : AppCompatActivity() {
 
@@ -41,6 +46,17 @@ class ViewObjectActivity : AppCompatActivity() {
         descripcions = findViewById(R.id.tvDescripcionVi)
         imagens = findViewById(R.id.ivLogoVi)
         baseDatos = Room.databaseBuilder(this, AppBaseDatos::class.java, AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().build()
+        // Obtain BannerView.
+        var bannerView: BannerView? = findViewById(R.id.hw_banner_view)
+        // Set the ad unit ID and ad dimensions. "testw6vs28auh3" is a dedicated test ad unit ID.
+        bannerView!!.adId = "testw6vs28auh3"
+        bannerView!!.bannerAdSize = BannerAdSize.BANNER_SIZE_360_57
+        // Set the refresh interval to 30 seconds.
+        bannerView!!.setBannerRefresh(30)
+        // Create an ad request to load an ad.
+        val adParam = AdParam.Builder().build()
+        bannerView!!.loadAd(adParam)
+        /*
         val bundle: Bundle?= intent.extras
         val nombres = bundle!!.getString("nombre")
         val descripciones = bundle.getString("descripcion")
@@ -49,6 +65,8 @@ class ViewObjectActivity : AppCompatActivity() {
         nombre.text = nombres
         descripcions.text = descripciones
         imagens.setImageURI(imagenUri)
+
+
 
         btnAgregarBtn.setOnClickListener {
             val historial = Historial(
@@ -61,6 +79,8 @@ class ViewObjectActivity : AppCompatActivity() {
                 ControladorImagenHistorial.guardarImagenes(this, id, it)
             }
         }
+
+         */
     }
     private fun replaceFragment(fragment: Fragment){
         if(fragment!=null){
@@ -73,7 +93,12 @@ class ViewObjectActivity : AppCompatActivity() {
     fun onClick(view:View) {
         when (view.getId()) {
              R.id.buttonServices ->replaceFragment(fragmentInformation)
-            R.id.buttonContant->replaceFragment(fragmentContact)
+            R.id.buttonContant->getViewObject()
         }
     }
+
+    private fun getViewObject() {
+        var intent = Intent(this,MapActivity::class.java)
+        startActivity(intent)
+}
 }
