@@ -40,10 +40,8 @@ class FragmentBuscador : Fragment() {
         binding.rvLista.layoutManager = LinearLayoutManager(view.context)
         adaptador.AdaptadorPublicacion(baseDatos.publicacionDao.buscarPublicacion(), view.context)
         binding.rvLista.adapter = adaptador
-        //TEMPORAL
-        binding.buttonSearch.setOnClickListener {
-            var intent = Intent(view.context,ViewObjectActivity::class.java)
-            startActivity(intent)
-        }
+    }
+    fun getInformation(){
+        
     }
 }

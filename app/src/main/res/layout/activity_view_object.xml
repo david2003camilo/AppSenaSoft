@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:hwads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".ui.viewObject.ViewObjectActivity">
     <ScrollView
         android:id="@+id/scrollView2"
@@ -98,6 +100,12 @@
                     app:cornerRadius="20dp"
                     android:text="Agregar"
                     />
+                <com.huawei.hms.ads.banner.BannerView
+                    android:id="@+id/hw_banner_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    hwads:adId="testw6vs28auh3"
+                    hwads:bannerSize="BANNER_SIZE_360_57" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

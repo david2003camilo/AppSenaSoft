@@ -6,6 +6,8 @@ import com.sena.quehaypahacer.bd.entitys.Publicacion
 @Dao
 interface PublicacionDao {
     @Insert
+    fun insertarPublicidades(publicacion: ArrayList<Publicacion>)
+    @Insert
     fun insertartPublicacion(vararg publicacion: Publicacion):List<Long>
     @Update
     fun actualizarPublicacion(publicacion: Publicacion)
