@@ -7,9 +7,11 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.room.Room
 import com.sena.quehaypahacer.ControladorImagenPubli
 import com.sena.quehaypahacer.R
 import com.sena.quehaypahacer.adaptadores.AdaptadorPublicacion
+import com.sena.quehaypahacer.adaptadores.AdapterHistorial
 import com.sena.quehaypahacer.bd.AppBaseDatos
 import com.sena.quehaypahacer.bd.entitys.Historial
 import com.sena.quehaypahacer.ui.ControladorImagenHistorial
@@ -27,6 +29,7 @@ class ViewObjectActivity : AppCompatActivity() {
     var fragmentInformation = InformationObjectFragment()
     var fragmentContact = ContactFragment()
     lateinit var baseDatos: AppBaseDatos
+    private var adaptador: AdapterHistorial = AdapterHistorial()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +40,7 @@ class ViewObjectActivity : AppCompatActivity() {
         nombre = findViewById(R.id.tittle_object)
         descripcions = findViewById(R.id.tvDescripcionVi)
         imagens = findViewById(R.id.ivLogoVi)
+        baseDatos = Room.databaseBuilder(this, AppBaseDatos::class.java, AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().build()
         val bundle: Bundle?= intent.extras
         val nombres = bundle!!.getString("nombre")
         val descripciones = bundle.getString("descripcion")
@@ -55,7 +59,7 @@ class ViewObjectActivity : AppCompatActivity() {
             val id = baseDatos.historialDao.insertarHistorial(historial)[0]
             imagenUri.let {
                 ControladorImagenHistorial.guardarImagenes(this, id, it)
-            }git 
+            }
         }
     }
     private fun replaceFragment(fragment: Fragment){
