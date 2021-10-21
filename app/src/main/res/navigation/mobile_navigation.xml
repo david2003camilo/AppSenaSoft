@@ -31,4 +31,14 @@
         android:name="com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity"
         android:label="activity_view_object"
         tools:layout="@layout/activity_view_object" />
+    <activity
+        android:id="@+id/login"
+        android:name="com.sena.quehaypahacer.ui.login.Login"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/fragmentHistorial"
+        android:name="com.sena.quehaypahacer.ui.historial.FragmentHistorial"
+        android:label="fragment_historial"
+        tools:layout="@layout/fragment_historial" />
 </navigation>

@@ -16,10 +16,10 @@ data class Servicios(
     val id:Int = 0,
     @ColumnInfo(name="nombreServicio")
     var nombreServicio:String,
-    @ColumnInfo(name="descripcion")
-    var descripcion:String,
-    @ColumnInfo(name="valor")
-    var valor: String,
+    @ColumnInfo(name="descripcionServ")
+    var descripcionServ:String,
+    @ColumnInfo(name="valorServ")
+    var valorServ: String,
     @ColumnInfo(name="idPublicacionFK")
     var idPublicacionFk:Int
         )

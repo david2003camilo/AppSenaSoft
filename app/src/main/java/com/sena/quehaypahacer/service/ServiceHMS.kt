@@ -1,4 +1,4 @@
-package com.sena.appsenasoft.ui.service
+package com.sena.quehaypahacer.service
 
 import android.util.Log
 import com.huawei.hms.push.HmsMessageService

@@ -15,4 +15,6 @@ interface PublicacionDao {
     fun eliminarPublicacion(publicacion: Publicacion)
     @Query("SELECT * FROM publicacion")
     fun buscarPublicacion():MutableList<Publicacion>
+    @Query("SELECT * FROM publicacion WHERE idPublicacion = :id")
+    fun buscarUno(id:Int): MutableList<Publicacion>
 }

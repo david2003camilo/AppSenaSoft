@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
@@ -13,4 +13,16 @@
         android:id="@+id/navigation_login"
         android:icon="@drawable/insertar"
         android:title="Insertar" />
+    <item
+        android:id="@+id/fragmentHistorial"
+        android:icon="@drawable/lista"
+        app:showAsAction="ifRoom"
+        android:title="historial"/>
+    <item
+        android:id="@+id/login"
+        android:icon="@drawable/salida"
+        app:showAsAction="ifRoom"
+        android:title="Salida" />
+
+
 </menu>
