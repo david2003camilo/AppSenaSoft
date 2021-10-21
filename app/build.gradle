@@ -20,7 +20,7 @@ android {
     }
     signingConfigs {
         config {
-            storeFile file('C:\\Users\\Administrador\\Desktop\\SoftwareApp\\app\\key.jks')
+            storeFile file('C:\\Users\\Administrador\\Desktop\\PROYECTO\\AppSenaSoft\\app\\key.jks')
             storePassword '123456'
             keyPassword '123456'
             keyAlias 'key'
@@ -52,6 +52,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def room_version = "2.3.0"
 
+    implementation 'com.huawei.hms:hwid:6.1.0.302'
     implementation("androidx.room:room-runtime:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
     implementation 'androidx.core:core-ktx:1.6.0'

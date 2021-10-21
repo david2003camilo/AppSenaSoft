@@ -17,23 +17,12 @@ class Register : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
         baseDatos= Room.databaseBuilder(this, AppBaseDatos::class.java,  AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().build()
-        var respuesta = ""
-        Toast.makeText(this, "Se selecciono $respuesta", Toast.LENGTH_SHORT).show()
-        binding.rbMer.setOnClickListener {
-            respuesta="merodeador"
-            Toast.makeText(this, "Se selecciono $respuesta", Toast.LENGTH_SHORT).show()
-        }
-        binding.rbPub.setOnClickListener {
-            respuesta="publicador"
-            Toast.makeText(this, "Selecciono $respuesta", Toast.LENGTH_SHORT).show()
-        }
         binding.btnRegistrarse.setOnClickListener {
             val usuario = Usuarios(
                 0,
                 binding.etEmailRe.text.toString(),
                 binding.etPasswordRe.text.toString(),
                 binding.etPassworfReTwo.text.toString(),
-                respuesta,
                 binding.etUsername.text.toString()
                 )
             baseDatos.usuarioDao.insertarUsuario(usuario)

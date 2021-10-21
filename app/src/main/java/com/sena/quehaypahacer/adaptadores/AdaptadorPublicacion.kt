@@ -1,10 +1,13 @@
 package com.sena.quehaypahacer.adaptadores
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
@@ -16,6 +19,9 @@ import com.sena.quehaypahacer.bd.entitys.Publicacion
 import com.sena.quehaypahacer.R
 import com.sena.quehaypahacer.ui.buscador.FragmentBuscador
 import com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity
+import java.util.*
+import java.util.stream.Stream
+import kotlin.collections.ArrayList
 
 
 class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolder>(){
@@ -65,4 +71,5 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
     override fun getItemCount(): Int {
         return listaPublicacion.size
     }
+
 }
