@@ -1,8 +1,8 @@
-package com.sena.appsenasoft.bd.dao
+package com.sena.quehaypahacer.bd.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
-import com.sena.appsenasoft.bd.entitys.Ubicacion
+import com.sena.quehaypahacer.bd.entitys.Ubicacion
 
 @Dao
 interface UbicacionDao {

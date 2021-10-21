@@ -1,12 +1,11 @@
-package com.sena.appsenasoft.ui.login
+package com.sena.quehaypahacer.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sena.appsenasoft.MainActivity
-import com.sena.appsenasoft.R
-import com.sena.appsenasoft.databinding.ActivityLoginBinding
-import com.sena.appsenasoft.ui.register.Register
+import com.sena.quehaypahacer.MainActivity
+import com.sena.quehaypahacer.databinding.ActivityLoginBinding
+import com.sena.quehaypahacer.ui.register.Register
 
 class Login : AppCompatActivity() {
 
@@ -21,7 +20,7 @@ class Login : AppCompatActivity() {
             startActivity(intent)
         }
         binding.btnIngresar.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java).apply {  }
             startActivity(intent)
         }
     }

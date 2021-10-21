@@ -1,4 +1,4 @@
-package com.sena.appsenasoft.ui.insertar
+package com.sena.quehaypahacer.ui.insertar
 
 import android.app.Activity
 import android.content.Intent
@@ -10,13 +10,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.room.Room
-import com.sena.appsenasoft.ControladorImagenPubli
-import com.sena.appsenasoft.ControladorImagenServ
-import com.sena.appsenasoft.bd.AppBaseDatos
-import com.sena.appsenasoft.bd.entitys.Publicacion
-import com.sena.appsenasoft.bd.entitys.Servicios
-import com.sena.appsenasoft.bd.entitys.Ubicacion
-import com.sena.appsenasoft.databinding.FragmentInsertarBinding
+import com.sena.quehaypahacer.ControladorImagenPubli
+import com.sena.quehaypahacer.ControladorImagenServ
+import com.sena.quehaypahacer.databinding.FragmentInsertarBinding
+import com.sena.quehaypahacer.bd.AppBaseDatos
+import com.sena.quehaypahacer.bd.entitys.Publicacion
+import com.sena.quehaypahacer.bd.entitys.Servicios
+import com.sena.quehaypahacer.bd.entitys.Ubicacion
 
 class FragmentInsertar : Fragment() {
 

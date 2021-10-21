@@ -1,4 +1,4 @@
-package com.sena.appsenasoft.bd.entitys
+package com.sena.quehaypahacer.bd.entitys
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

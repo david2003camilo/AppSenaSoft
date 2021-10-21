@@ -1,10 +1,10 @@
-package com.sena.appsenasoft.bd
+package com.sena.quehaypahacer.bd
 
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.sena.appsenasoft.bd.dao.*
-import com.sena.appsenasoft.bd.entitys.*
+import com.sena.quehaypahacer.bd.dao.*
+import com.sena.quehaypahacer.bd.entitys.*
 
 @Database(entities = [Historial::class, Publicacion::class, Servicios::class, Ubicacion::class, Usuarios::class], version=3, exportSchema = false)
 abstract class AppBaseDatos:RoomDatabase() {

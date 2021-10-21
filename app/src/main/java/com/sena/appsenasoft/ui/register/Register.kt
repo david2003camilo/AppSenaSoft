@@ -1,13 +1,12 @@
-package com.sena.appsenasoft.ui.register
+package com.sena.quehaypahacer.ui.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.room.Room
-import com.sena.appsenasoft.bd.AppBaseDatos
-import com.sena.appsenasoft.bd.entitys.Usuarios
-import com.sena.appsenasoft.databinding.ActivityMainBinding
-import com.sena.appsenasoft.databinding.ActivityRegisterBinding
+import com.sena.quehaypahacer.databinding.ActivityRegisterBinding
+import com.sena.quehaypahacer.bd.AppBaseDatos
+import com.sena.quehaypahacer.bd.entitys.Usuarios
 
 class Register : AppCompatActivity() {
     lateinit var baseDatos: AppBaseDatos

@@ -1,14 +1,17 @@
-package com.sena.appsenasoft.adaptadores
+package com.sena.quehaypahacer.adaptadores
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.sena.appsenasoft.R
-import com.sena.appsenasoft.bd.entitys.Servicios
+import com.sena.quehaypahacer.bd.entitys.Servicios
+import com.sena.quehaypahacer.R
 import org.w3c.dom.Text
+import android.content.Intent as Intent
 
 class AdaptadorServicios: RecyclerView.Adapter<AdaptadorServicios.ViewHolder>() {
 

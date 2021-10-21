@@ -1,13 +1,13 @@
-package com.sena.appsenasoft.ui.viewObject
+package com.sena.quehaypahacer.ui.viewObject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.sena.appsenasoft.R
-import com.sena.appsenasoft.ui.information.ContactFragment
-import com.sena.appsenasoft.ui.information.InformationObjectFragment
+import com.sena.quehaypahacer.R
+import com.sena.quehaypahacer.ui.information.ContactFragment
+import com.sena.quehaypahacer.ui.information.InformationObjectFragment
 
 class ViewObjectActivity : AppCompatActivity() {
     lateinit var buttonService:Button
@@ -16,7 +16,7 @@ class ViewObjectActivity : AppCompatActivity() {
     var fragmentContact = ContactFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.sena.appsenasoft.R.layout.activity_view_object)
+        setContentView(com.sena.quehaypahacer.R.layout.activity_view_object)
         buttonService = findViewById(R.id.buttonServices)
         buttonContact = findViewById(R.id.buttonContant)
     }

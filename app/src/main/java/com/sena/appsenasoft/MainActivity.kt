@@ -1,15 +1,13 @@
-package com.sena.appsenasoft
+package com.sena.quehaypahacer
 
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.sena.appsenasoft.databinding.ActivityMainBinding
+import com.sena.quehaypahacer.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

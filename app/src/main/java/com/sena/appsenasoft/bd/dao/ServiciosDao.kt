@@ -1,7 +1,7 @@
-package com.sena.appsenasoft.bd.dao
+package com.sena.quehaypahacer.bd.dao
 
 import androidx.room.*
-import com.sena.appsenasoft.bd.entitys.Servicios
+import com.sena.quehaypahacer.bd.entitys.Servicios
 
 @Dao
 interface ServiciosDao {

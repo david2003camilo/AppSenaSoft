@@ -1,4 +1,4 @@
-package com.sena.appsenasoft.ui.buscador
+package com.sena.quehaypahacer.ui.buscador
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import com.sena.appsenasoft.R
-import com.sena.appsenasoft.adaptadores.AdaptadorPublicacion
-import com.sena.appsenasoft.bd.AppBaseDatos
-import com.sena.appsenasoft.databinding.FragmentBuscadorBinding
-import com.sena.appsenasoft.ui.viewObject.ViewObjectActivity
+import com.sena.quehaypahacer.databinding.FragmentBuscadorBinding
+import com.sena.quehaypahacer.adaptadores.AdaptadorPublicacion
+import com.sena.quehaypahacer.bd.AppBaseDatos
+import com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity
 
 
 class FragmentBuscador : Fragment() {

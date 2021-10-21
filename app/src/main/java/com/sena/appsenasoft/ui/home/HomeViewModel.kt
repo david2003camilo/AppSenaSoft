@@ -1,4 +1,4 @@
-package com.sena.appsenasoft.ui.home
+package com.sena.quehaypahacer.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

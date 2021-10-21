@@ -1,5 +1,4 @@
-package com.sena.appsenasoft
-
+package com.sena.quehaypahacer
 import android.content.Context
 import android.content.Intent
 import android.net.Uri

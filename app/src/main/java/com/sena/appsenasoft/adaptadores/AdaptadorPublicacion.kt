@@ -1,4 +1,4 @@
-package com.sena.appsenasoft.adaptadores
+package com.sena.quehaypahacer.adaptadores
 
 import android.content.Context
 import android.content.Intent
@@ -8,13 +8,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.sena.appsenasoft.ControladorImagenPubli
-import com.sena.appsenasoft.MainActivity
-import com.sena.appsenasoft.R
-import com.sena.appsenasoft.bd.entitys.Publicacion
-import com.sena.appsenasoft.ui.viewObject.ViewObjectActivity
+import com.sena.quehaypahacer.ControladorImagenPubli
+import com.sena.quehaypahacer.bd.entitys.Publicacion
+import com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity
+import com.sena.quehaypahacer.R
 
 
 class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolder>(){
@@ -51,8 +49,11 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
        val lista = listaPublicacion[position]
         holder.bind(lista, context)
         holder.itemView.setOnClickListener {
+            val intent = Intent(context, ViewObjectActivity::class.java)
+
             Toast.makeText(context, "Mensaje", Toast.LENGTH_SHORT).show()
         }
+
     }
 
     override fun getItemCount(): Int {

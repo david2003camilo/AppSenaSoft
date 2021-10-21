@@ -1,9 +1,9 @@
-package com.sena.appsenasoft.bd.dao
+package com.sena.quehaypahacer.bd.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.sena.appsenasoft.bd.entitys.Usuarios
+import com.sena.quehaypahacer.bd.entitys.Usuarios
 
 @Dao
 interface UsuarioDao {
