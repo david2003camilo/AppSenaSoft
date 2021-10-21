@@ -24,7 +24,7 @@
 
             <ImageView
                 android:layout_marginTop="10dp"
-                android:id="@+id/imageViewObject"
+                android:id="@+id/ivLogoVi"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:src="@mipmap/ic_launcher" />
@@ -44,11 +44,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:id="@+id/tvDescripcionVi"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="280dp"
+                android:layout_marginRight="10dp"
                 android:text="Esta es una pequeña descripcion" />
 
             <LinearLayout
@@ -82,22 +83,24 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <FrameLayout
+                <fragment
                     android:id="@+id/fragments_replace"
+                    android:name="com.sena.quehaypahacer.ui.FragmentListaServicios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     />
+
                 <Button
+                    android:id="@+id/btnAgregar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Agregar"
+                    app:cornerRadius="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:layout_marginBottom="10dp"
-                    app:cornerRadius="20dp"
-                    android:text="Agregar"
-                    />
+                    tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

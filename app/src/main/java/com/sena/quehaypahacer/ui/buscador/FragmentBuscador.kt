@@ -42,8 +42,10 @@ class FragmentBuscador : Fragment() {
         binding.rvLista.adapter = adaptador
         //TEMPORAL
         binding.buttonSearch.setOnClickListener {
-            var intent = Intent(view.context,ViewObjectActivity::class.java)
+            val intent = Intent(view.context,ViewObjectActivity::class.java)
             startActivity(intent)
         }
     }
+
+
 }

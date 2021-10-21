@@ -7,15 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
+import androidx.core.os.bundleOf
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.sena.quehaypahacer.ControladorImagenPubli
 import com.sena.quehaypahacer.bd.entitys.Publicacion
-import com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity
 import com.sena.quehaypahacer.R
+import com.sena.quehaypahacer.ui.buscador.FragmentBuscador
+import com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity
 
 
 class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolder>(){
+
     private var listaPublicacion: MutableList<Publicacion> = arrayListOf()
     lateinit var context: Context
 
@@ -24,7 +28,7 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
         this.context=context
     }
 
-    class ViewHolder(view:View):RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view:View):RecyclerView.ViewHolder(view) {
         val nombre = view.findViewById(R.id.tvNombreVis) as TextView
         val descripcion = view.findViewById(R.id.tvDescripcion) as TextView
         val imagen = view.findViewById(R.id.ivImagen) as ImageView
@@ -35,6 +39,7 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
             imagen.setImageURI(imagenUri)
         }
     }
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -46,14 +51,15 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       val lista = listaPublicacion[position]
+        val lista = listaPublicacion[position]
         holder.bind(lista, context)
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, ViewObjectActivity::class.java)
-
-            Toast.makeText(context, "Mensaje", Toast.LENGTH_SHORT).show()
+            val intent: Intent = Intent(holder.itemView.context, ViewObjectActivity::class.java)
+            intent.putExtra("nombre", lista.nombre)
+            intent.putExtra("descripcion", lista.descripcion)
+            intent.putExtra("imagenId", lista.id)
+            startActivity(context, intent, bundleOf())
         }
-
     }
 
     override fun getItemCount(): Int {

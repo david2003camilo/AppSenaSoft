@@ -1,4 +1,4 @@
-package com.sena.appsenasoft
+package com.sena.quehaypahacer
 
 import org.junit.Test
 

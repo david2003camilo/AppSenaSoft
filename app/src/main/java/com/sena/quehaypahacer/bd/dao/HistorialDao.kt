@@ -8,7 +8,7 @@ import com.sena.quehaypahacer.bd.entitys.Historial
 @Dao
 interface HistorialDao {
     @Insert
-    fun insertarHistorial(historial: Historial)
+    fun insertarHistorial(vararg historial: Historial): List<Long>
     @Query("SELECT * FROM historial")
     fun buscarHistorial():MutableList<Historial>
 }

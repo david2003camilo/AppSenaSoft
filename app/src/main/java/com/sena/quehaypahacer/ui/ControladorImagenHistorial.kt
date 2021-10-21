@@ -1,18 +1,11 @@
-package com.sena.quehaypahacer
+package com.sena.quehaypahacer.ui
+
 import android.content.Context
-import android.content.Intent
 import android.net.Uri
-import androidx.fragment.app.Fragment
 import java.io.File
 
-object
-ControladorImagenPubli {
-    fun seleccionarImagenGaleria(activity: Fragment, code:Int){
-        val intent = Intent(Intent.ACTION_PICK)
-        intent.type="image/*"
-        activity.startActivityForResult(intent, code)
-    }
-    fun guardarImagenes(context:Context, id:Long, uri: Uri){
+object ControladorImagenHistorial {
+    fun guardarImagenes(context: Context, id:Long, uri: Uri){
         val archivo = File(context.filesDir, id.toString())
         val bytes = context.contentResolver.openInputStream(uri)?.readBytes()!!
         archivo.writeBytes(bytes)

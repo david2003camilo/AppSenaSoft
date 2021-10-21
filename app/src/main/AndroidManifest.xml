@@ -11,7 +11,10 @@
         android:theme="@style/Theme.AppSenaSoft">
         <activity
             android:name=".ui.register.Register"
+            android:configChanges="orientation"
             android:exported="false" />
+        <activity android:name=".ui.viewObject.ViewObjectActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -26,5 +29,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
