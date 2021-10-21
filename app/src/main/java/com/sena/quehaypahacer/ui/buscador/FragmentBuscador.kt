@@ -49,5 +49,4 @@ class FragmentBuscador : Fragment() {
         }
     }
 
-
 }
