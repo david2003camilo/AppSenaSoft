@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'com.huawei.agconnect'
+    id 'kotlin-android-extensions'
 }
 apply plugin: 'com.huawei.agconnect'
 
@@ -20,7 +21,7 @@ android {
     }
     signingConfigs {
         config {
-            storeFile file('C:\\Users\\Administrador\\Desktop\\PROYECTO\\AppSenaSoft\\app\\key.jks')
+            storeFile file('C:\\Users\\Administrador\\Desktop\\SoftwareApp\\app\\key.jks')
             storePassword '123456'
             keyPassword '123456'
             keyAlias 'key'
@@ -72,4 +73,10 @@ dependencies {
     implementation 'com.huawei.hms:ads:3.4.47.302'
     implementation 'com.huawei.hms:push:6.1.0.300'
     implementation 'com.huawei.hms:ads-identifier:3.4.34.301'
+    implementation 'com.huawei.hms:location:5.0.4.300'
+
+    implementation 'com.huawei.hms:maps:5.2.0.301'
+
+    implementation 'com.huawei.hms:site:5.0.5.301'
+
 }

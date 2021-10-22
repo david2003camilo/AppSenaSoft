@@ -37,13 +37,12 @@ class FragmentBuscador : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        baseDatos = Room.databaseBuilder(view.context, AppBaseDatos::class.java, AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().build()
+        //for override the bd is new 
+        baseDatos = Room.databaseBuilder(view.context, AppBaseDatos::class.java, AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().fallbackToDestructiveMigration().build()
         binding.rvLista.setHasFixedSize(true)
         binding.rvLista.layoutManager = LinearLayoutManager(view.context)
         adaptador.AdaptadorPublicacion(baseDatos.publicacionDao.buscarPublicacion(), view.context)
         binding.rvLista.adapter = adaptador
-
     }
-
 
 }

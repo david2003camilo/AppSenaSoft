@@ -85,7 +85,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <fragment
+                <FrameLayout
                     android:id="@+id/fragments_replace"
                     android:name="com.sena.quehaypahacer.ui.FragmentListaServicios"
                     android:layout_width="match_parent"
@@ -107,10 +107,7 @@
                     android:layout_height="wrap_content"
                     hwads:adId="testw6vs28auh3"
                     hwads:bannerSize="BANNER_SIZE_360_57" />
-                    app:cornerRadius="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-                    tools:ignore="SpeakableTextPresentCheck" />
+
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

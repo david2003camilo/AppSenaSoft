@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase
 import com.sena.quehaypahacer.bd.dao.*
 import com.sena.quehaypahacer.bd.entitys.*
 
-@Database(entities = [Historial::class, Publicacion::class, Servicios::class, Ubicacion::class, Usuarios::class], version=5, exportSchema = false)
+@Database(entities = [Historial::class, Publicacion::class, Servicios::class, Ubicacion::class, Usuarios::class], version=6, exportSchema = false)
 abstract class AppBaseDatos:RoomDatabase() {
     abstract val historialDao:HistorialDao
     abstract val publicacionDao:PublicacionDao
