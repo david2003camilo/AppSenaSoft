@@ -34,6 +34,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListen
     private val MAPVIEW_BUNDLE_KEY= "MapViewBundleKey"
     lateinit var gps:GPS
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.ThemeNotBar)
         super.onCreate(savedInstanceState)
         MapsInitializer.setApiKey(KEY)
         setContentView(R.layout.activity_map)
