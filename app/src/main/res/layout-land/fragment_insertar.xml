@@ -9,13 +9,13 @@
 
     <EditText
         android:id="@+id/etNombre"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,8 +23,8 @@
         android:id="@+id/ivImagenRegis"
         android:layout_width="166dp"
         android:layout_height="178dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
         android:background="@drawable/sombreadodos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,74 +33,75 @@
 
     <ImageView
         android:id="@+id/ivImagenServ"
-        android:layout_width="166dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="98dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="204dp"
         android:background="@drawable/sombreadodos"
         app:layout_constraintBottom_toTopOf="@+id/btnServicio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.965"
+        app:layout_constraintVertical_bias="0.962"
         app:srcCompat="@drawable/galeria"
         tools:src="@tools:sample/avatars" />
 
     <EditText
         android:id="@+id/etNombreServ"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etDescripcionSer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toEndOf="@+id/ivImagenServ"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
+        app:layout_constraintVertical_bias="0.748" />
 
     <EditText
         android:id="@+id/etDescripcionSer"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginBottom="36dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etValor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toEndOf="@+id/ivImagenServ" />
 
     <EditText
         android:id="@+id/etValor"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/etIdPublicacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/ivImagenServ" />
 
     <EditText
         android:id="@+id/etIdPublicacion"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="date"
+        android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/ivImagenServ" />
 
     <Button
         android:id="@+id/btnPublicacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:text="insertar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintHorizontal_bias="0.065"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivImagenRegis" />
 
@@ -108,25 +109,27 @@
         android:id="@+id/btnServicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:text="INSERTAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintHorizontal_bias="0.602"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etDescripcionRe"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="103dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/etNombre"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView21"
@@ -136,10 +139,10 @@
         android:textColor="#FF5B03"
         app:layout_constraintBottom_toTopOf="@+id/etNombre"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView22"
@@ -149,10 +152,10 @@
         android:textColor="#FF5B03"
         app:layout_constraintBottom_toTopOf="@+id/etDescripcionRe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintHorizontal_bias="0.293"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNombre"
-        app:layout_constraintVertical_bias="0.621" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView23"
@@ -163,10 +166,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/ivImagenRegis"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.532" />
 
     <TextView
         android:id="@+id/textView24"
@@ -177,10 +180,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/ivImagenServ"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.656"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.532" />
 
     <TextView
         android:id="@+id/textView25"
@@ -190,7 +193,7 @@
         android:textColor="#FF5B03"
         app:layout_constraintBottom_toTopOf="@+id/etNombreServ"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.623"
+        app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDescripcionRe"
         app:layout_constraintVertical_bias="1.0" />
@@ -203,7 +206,7 @@
         android:textColor="#FF5B03"
         app:layout_constraintBottom_toTopOf="@+id/etDescripcionSer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toEndOf="@+id/ivImagenServ"
         app:layout_constraintTop_toBottomOf="@+id/etNombreServ"
         app:layout_constraintVertical_bias="1.0" />
@@ -216,10 +219,10 @@
         android:textColor="#FF5B03"
         app:layout_constraintBottom_toTopOf="@+id/etValor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toEndOf="@+id/ivImagenServ"
         app:layout_constraintTop_toBottomOf="@+id/etDescripcionSer"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.823" />
 
     <TextView
         android:id="@+id/textView28"
@@ -229,7 +232,7 @@
         android:textColor="#FF5B03"
         app:layout_constraintBottom_toTopOf="@+id/etIdPublicacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etValor"
         app:layout_constraintVertical_bias="1.0" />
