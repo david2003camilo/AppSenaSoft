@@ -25,6 +25,7 @@ import android.Manifest.permission.ACCESS_WIFI_STATE
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.util.Log
 import com.huawei.hms.maps.map
+import kotlinx.android.synthetic.main.activity_map.*
 
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListener{
@@ -37,11 +38,11 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListen
         MapsInitializer.setApiKey(KEY)
         setContentView(R.layout.activity_map)
         initHuaweiMap(savedInstanceState)
-        //if(checkLocationPermissions()){
-            //setupGPS()
-        //}else{
+        if(checkLocationPermissions()){
+            setupGPS()
+        }else{
             requestLocationPermissions()
-        //}
+        }
     }
 
     private fun requestLocationPermissions() {
@@ -77,13 +78,14 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListen
             }
         }
     }
-
     private fun setupGPS() {
         gps=GPS(this)
         gps.gpsEventListener=this
         gps.starLocationsRequest()
 
     }
+
+
 
     private fun checkLocationPermissions(): Boolean {
         val location:Int= ContextCompat.checkSelfPermission(this@MapActivity,android.Manifest.permission.ACCESS_FINE_LOCATION)or
@@ -107,12 +109,17 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListen
             getMapAsync(this@MapActivity)
         }
     }
-    @RequiresPermission(allOf = [android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_WIFI_STATE])
     override fun onMapReady(map: HuaweiMap) {
         if(map!=null){
             hMap = map
-            hMap!!.isMyLocationEnabled = true
-            hMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(48.893478, 2.334595), 10f))
+            hMap?.isMyLocationEnabled = true
+            hMap?.uiSettings?.isMyLocationButtonEnabled= true
+            val location=LatLng(48.893478, 2.334595)
+            val update=CameraUpdateFactory.newLatLngZoom(location,10.0f)
+            hMap?.clear()
+            hMap?.animateCamera(update)
+
+            //hMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(48.893478, 2.334595), 10f))
 
         }
     }
@@ -147,11 +154,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListen
     }
 
     override fun onResolutionRequited(e: Exception) {
-
+        Log.e("ERROR LOCATION",e.toString())
     }
 
     override fun onLastKnownLocation(lat: Double, lon: Double) {
-
+        Log.e("DATA","$lat:$lon")
     }
-
 }

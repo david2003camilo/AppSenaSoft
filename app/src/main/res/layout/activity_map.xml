@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.information.MapActivity">
-    <com.huawei.hms.ads.banner.BannerView
-        android:id="@+id/hw_banner_view"
+    <com.huawei.hms.maps.MapView
+        android:id="@+id/mapview_mapview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        hwads:adId="testw6vs28auh3"
-        hwads:bannerSize="BANNER_SIZE_360_57"
-        android:layout_marginBottom="20dp"
-        />
+        app:cameraTargetLat="48.893478"
+        app:cameraTargetLng="2.334595"
+        app:cameraZoom="10"
+        app:mapType="normal" />
 
 </RelativeLayout>

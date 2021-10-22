@@ -16,12 +16,10 @@
     <item
         android:id="@+id/fragmentHistorial"
         android:icon="@drawable/lista"
-        app:showAsAction="ifRoom"
         android:title="historial"/>
     <item
         android:id="@+id/login"
         android:icon="@drawable/salida"
-        app:showAsAction="ifRoom"
         android:title="Salida" />
 
 

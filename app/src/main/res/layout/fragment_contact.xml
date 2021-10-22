@@ -29,14 +29,6 @@
         android:layout_below="@+id/textView2"
         android:text="Email  : 23232323" />
 
-    <com.huawei.hms.maps.MapView
-        android:layout_below="@id/textView3"
-        android:id="@+id/mapview_mapview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cameraTargetLat="48.893478"
-        app:cameraTargetLng="2.334595"
-        app:cameraZoom="10"
-        app:mapType="normal" />
+
 
 </RelativeLayout>

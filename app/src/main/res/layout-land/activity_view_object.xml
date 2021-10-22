@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:hwads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.viewObject.ViewObjectActivity">
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="10dp"
+            >
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/ivLogoVi"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@mipmap/ic_launcher" />
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/tittle_object"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="220dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:text="tittle object"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDescripcionVi"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="280dp"
+                android:layout_marginRight="10dp"
+                android:text="Esta es una pequeña descripcion" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="480dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:onClick="onClick"
+                    android:id="@+id/buttonServices"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    app:cornerRadius="20dp"
+                    android:text="Servicios" />
+
+                <Button
+                    android:id="@+id/buttonContant"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:onClick="onClick"
+                    app:cornerRadius="20dp"
+                    android:text="Contactos" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="560dp"
+                android:id="@+id/layoutLinera"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <fragment
+                    android:id="@+id/fragments_replace"
+                    android:name="com.sena.quehaypahacer.ui.FragmentListaServicios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnAgregar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Agregar"
+
+                    />
+                <com.huawei.hms.ads.banner.BannerView
+                    android:id="@+id/hw_banner_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    hwads:adId="testw6vs28auh3"
+                    hwads:bannerSize="BANNER_SIZE_360_57" />
+                    app:cornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

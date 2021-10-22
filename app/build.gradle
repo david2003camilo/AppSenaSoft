@@ -53,6 +53,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def room_version = "2.3.0"
 
+    implementation 'com.huawei.hms:hwid:6.1.0.302'
     implementation("androidx.room:room-runtime:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
     implementation 'androidx.core:core-ktx:1.6.0'
@@ -73,6 +74,9 @@ dependencies {
     implementation 'com.huawei.hms:push:6.1.0.300'
     implementation 'com.huawei.hms:ads-identifier:3.4.34.301'
     implementation 'com.huawei.hms:location:5.0.4.300'
-    implementation 'com.huawei.hms:maps:5.0.5.301'
+
+    implementation 'com.huawei.hms:maps:5.2.0.301'
+
+    implementation 'com.huawei.hms:site:5.0.5.301'
 
 }

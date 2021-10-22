@@ -4,24 +4,31 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Administrador/Desktop/AppSenaSoft/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_register.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_view_object.xml" value="0.33" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/drawable/style_bordedos.xml" value="0.221875" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/drawable/style_border.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout-land/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout-land/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout-land/activity_view_object.xml" value="0.21957671957671956" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout-land/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/activity_view_object.xml" value="0.22" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_buscador.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_contact.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_crear_servicio.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_historial.xml" value="0.25" />
-        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_information_object.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_insertar.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_lista_servicios.xml" value="0.1" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_registrar.xml" value="0.33" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/fragment_view_object.xml" value="0.25885416666666666" />
-        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/lista.xml" value="0.33" />
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/lista.xml" value="0.22" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/lista_historial.xml" value="0.25" />
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/layout/lista_servicios.xml" value="0.33" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/Administrador/Desktop/SoftwareApp/app/src/main/res/layout/activity_login.xml" value="0.15" />
         <entry key="..\:/Users/Administrador/Desktop/SoftwareApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -36,6 +43,9 @@
         <entry key="..\:/Users/Administrador/Desktop/SoftwareApp/app/src/main/res/layout/fragment_insertar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Administrador/Desktop/SoftwareApp/app/src/main/res/layout/lista.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Administrador/Desktop/SoftwareApp/app/src/main/res/layout/lista_servicios.xml" value="0.20416666666666666" />
+=======
+        <entry key="..\:/Users/Administrador/Desktop/PROYECTO/AppSenaSoft/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+>>>>>>> 910f346e944e7507656f363dd1e8ebfc5aac5310
       </map>
     </option>
   </component>

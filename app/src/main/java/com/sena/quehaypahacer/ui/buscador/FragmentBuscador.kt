@@ -6,15 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import com.sena.quehaypahacer.databinding.FragmentBuscadorBinding
 import com.sena.quehaypahacer.adaptadores.AdaptadorPublicacion
 import com.sena.quehaypahacer.bd.AppBaseDatos
 import com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity
+import java.util.*
 
 
-class FragmentBuscador : Fragment() {
+class FragmentBuscador : Fragment(){
 
     private var _binding: FragmentBuscadorBinding? = null
     private val binding get() = _binding!!
@@ -35,15 +37,12 @@ class FragmentBuscador : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        baseDatos = Room.databaseBuilder(view.context, AppBaseDatos::class.java, AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().build()
+        //for override the bd is new 
+        baseDatos = Room.databaseBuilder(view.context, AppBaseDatos::class.java, AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().fallbackToDestructiveMigration().build()
         binding.rvLista.setHasFixedSize(true)
         binding.rvLista.layoutManager = LinearLayoutManager(view.context)
         adaptador.AdaptadorPublicacion(baseDatos.publicacionDao.buscarPublicacion(), view.context)
         binding.rvLista.adapter = adaptador
-        binding.buttonSearch.setOnClickListener {
-            val intent = Intent(view?.context,ViewObjectActivity::class.java)
-            startActivity(intent)
-        }
     }
 
 }
