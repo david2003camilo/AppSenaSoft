@@ -64,6 +64,7 @@ class AdaptadorPublicacion : RecyclerView.Adapter<AdaptadorPublicacion.ViewHolde
             intent.putExtra("nombre", lista.nombre)
             intent.putExtra("descripcion", lista.descripcion)
             intent.putExtra("imagenId", lista.id)
+            intent.putExtra("id", lista.id)
             startActivity(context, intent, bundleOf())
         }
     }

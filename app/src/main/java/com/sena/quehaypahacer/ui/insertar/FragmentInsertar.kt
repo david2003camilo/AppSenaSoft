@@ -17,6 +17,7 @@ import com.sena.quehaypahacer.bd.AppBaseDatos
 import com.sena.quehaypahacer.bd.entitys.Publicacion
 import com.sena.quehaypahacer.bd.entitys.Servicios
 import com.sena.quehaypahacer.bd.entitys.Ubicacion
+import kotlinx.android.synthetic.main.fragment_insertar.*
 
 class FragmentInsertar : Fragment() {
 
@@ -62,18 +63,26 @@ class FragmentInsertar : Fragment() {
     }
 
     private fun insertarServ() {
-        val servicios = Servicios(
-            0,
-            binding.etNombreServ.text.toString(),
-            binding.etDescripcionSer.text.toString(),
-            binding.etValor.text.toString(),
-            binding.etIdPublicacion.text.toString().toInt()
-        )
-        val id = baseDatos.serviciosDao.insertarServicio(servicios)[0]
-        imageUriDos?.let{
-            ControladorImagenServ.guardarImagenes(requireView().context, id, it)
+        if(binding.etNombreServ.text.isEmpty() || binding.etDescripcionSer.text.isEmpty() || binding.etValor.text.isEmpty() || binding.etIdPublicacion.text.isEmpty()){
+            Toast.makeText(view?.context, "Algun campo esta vacio, porfavor llenarlo", Toast.LENGTH_SHORT).show()
+        }else{
+            val servicios = Servicios(
+                0,
+                binding.etNombreServ.text.toString(),
+                binding.etDescripcionSer.text.toString(),
+                binding.etValor.text.toString(),
+                binding.etIdPublicacion.text.toString().toInt()
+            )
+            val id = baseDatos.serviciosDao.insertarServicio(servicios)[0]
+            imageUriDos?.let{
+                ControladorImagenServ.guardarImagenes(requireView().context, id, it)
+            }
+            etNombreServ.text.clear()
+            etDescripcionSer.text.clear()
+            etValor.text.clear()
+            etIdPublicacion.text.clear()
+            Toast.makeText(view?.context, "Se registro correctamenta", Toast.LENGTH_SHORT).show()
         }
-        Toast.makeText(view?.context, "Se registro correctamenta", Toast.LENGTH_SHORT).show()
     }
 
     private fun insertarUbi(){
@@ -83,21 +92,26 @@ class FragmentInsertar : Fragment() {
             24124.2
         )
         baseDatos.ubicacionDao.insertarUbicacion(ubicacion)
-        Toast.makeText(context, "Se inserto correctamente", Toast.LENGTH_SHORT).show()
     }
     private fun insertarPubli() {
-        val publicacion = Publicacion(
-            0,
-            binding.etNombre.text.toString(),
-            binding.etDescripcionRe.text.toString(),
-            1,
-            1
-        )
-        val id = baseDatos.publicacionDao.insertartPublicacion(publicacion)[0]
-        imageUri?.let{
-            ControladorImagenPubli.guardarImagenes(requireView().context, id, it)
+        if(binding.etNombre.text.isEmpty() || binding.etDescripcionRe.text.isEmpty()){
+            Toast.makeText(view?.context, "Algun campo esta vacio, porfavor llenarlo", Toast.LENGTH_SHORT).show()
+        }else{
+            val publicacion = Publicacion(
+                0,
+                binding.etNombre.text.toString(),
+                binding.etDescripcionRe.text.toString(),
+                1,
+                1
+            )
+            val id = baseDatos.publicacionDao.insertartPublicacion(publicacion)[0]
+            imageUri?.let{
+                ControladorImagenPubli.guardarImagenes(requireView().context, id, it)
+            }
+            binding.etNombre.text.clear()
+            binding.etDescripcionRe.text.clear()
+            Toast.makeText(view?.context, "Se añadio con exito", Toast.LENGTH_SHORT).show()
         }
-        Toast.makeText(view?.context, "Se añadio con exito", Toast.LENGTH_SHORT).show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

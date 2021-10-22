@@ -21,7 +21,7 @@ android {
     }
     signingConfigs {
         config {
-            storeFile file('C:\\Users\\Administrador\\Desktop\\SoftwareApp\\app\\key.jks')
+            storeFile file('C:\\Users\\Administrador\\Desktop\\PROYECTO\\AppSenaSoft\\app\\key.jks')
             storePassword '123456'
             keyPassword '123456'
             keyAlias 'key'

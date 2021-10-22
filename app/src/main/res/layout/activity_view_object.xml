@@ -7,6 +7,7 @@
     xmlns:hwads="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".ui.viewObject.ViewObjectActivity">
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -21,14 +22,13 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            app:cardCornerRadius="10dp"
-            >
+            app:cardCornerRadius="10dp">
 
             <ImageView
-                android:layout_marginTop="10dp"
                 android:id="@+id/ivLogoVi"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_marginTop="10dp"
                 android:src="@mipmap/ic_launcher" />
             <!-- TODO: Update blank fragment layout -->
             <TextView
@@ -62,13 +62,13 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:onClick="onClick"
                     android:id="@+id/buttonServices"
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
-                    app:cornerRadius="20dp"
-                    android:text="Servicios" />
+                    android:onClick="onClick"
+                    android:text="Servicios"
+                    app:cornerRadius="20dp" />
 
                 <Button
                     android:id="@+id/buttonContant"
@@ -76,22 +76,23 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"
                     android:onClick="onClick"
-                    app:cornerRadius="20dp"
-                    android:text="Contactos" />
+                    android:text="Mapa"
+                    app:cornerRadius="20dp" />
             </LinearLayout>
+
             <LinearLayout
-                android:layout_marginTop="560dp"
                 android:id="@+id/layoutLinera"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <FrameLayout
+                android:layout_height="wrap_content"
+                android:layout_marginTop="560dp"
+                android:orientation="vertical">
+
+                <fragment
                     android:id="@+id/fragments_replace"
                     android:name="com.sena.quehaypahacer.ui.FragmentListaServicios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    />
+                    android:layout_marginBottom="10dp" />
 
                 <Button
                     android:id="@+id/btnAgregar"
@@ -101,6 +102,7 @@
                     android:text="Agregar"
 
                     />
+
                 <com.huawei.hms.ads.banner.BannerView
                     android:id="@+id/hw_banner_view"
                     android:layout_width="match_parent"

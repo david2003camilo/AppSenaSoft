@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
             android:onClick="onClick"
-            android:text="Contactos"
+            android:text="Mapa"
             app:cornerRadius="20dp" />
     </LinearLayout>
 

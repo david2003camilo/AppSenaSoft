@@ -114,12 +114,13 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListen
             hMap = map
             hMap?.isMyLocationEnabled = true
             hMap?.uiSettings?.isMyLocationButtonEnabled= true
+            /*
             val location=LatLng(48.893478, 2.334595)
             val update=CameraUpdateFactory.newLatLngZoom(location,10.0f)
             hMap?.clear()
             hMap?.animateCamera(update)
-
-            //hMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(48.893478, 2.334595), 10f))
+        */
+            hMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(48.893478, 2.334595), 10f))
 
         }
     }

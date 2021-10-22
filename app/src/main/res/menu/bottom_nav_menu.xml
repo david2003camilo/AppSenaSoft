@@ -21,5 +21,4 @@
         android:id="@+id/login"
         android:icon="@drawable/salida"
         android:title="Salida" />
-
 </menu>

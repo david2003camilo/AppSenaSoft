@@ -13,4 +13,6 @@ interface ServiciosDao {
     fun eliminarServicio(servicios: Servicios)
     @Query("SELECT * FROM servicios")
     fun buscarServicios():MutableList<Servicios>
+    @Query("SELECT * FROM servicios WHERE idPublicacionFK = :id")
+    fun buscarServiciosId(id:Int): MutableList<Servicios>
 }

@@ -13,7 +13,7 @@
         android:layout_height="159dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.936"
@@ -22,15 +22,40 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="196dp"
+        android:layout_width="297dp"
+        android:layout_height="229dp"
         android:gravity="center"
-        android:text="Quehaypahacer?, es una App que le permitira al usuario en encontrar cosas que hacer en cualquier momento cuando este lo necesite."
+        android:text="Que hay pá hacer, es una App que le ofrecerá al usuario común una forma de liberarse de la monotonía del día a día o los momentos incomodos de querer realizar algo, pero no saber que, si eres uno o una más que están en esas situaciones… ¿Qué esperas para utilizarnos?"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.972" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ivAutores"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#E91E63"
+        android:src="@drawable/propietarios"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/autores"
+        android:textColor="#FF5B03"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAutores"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

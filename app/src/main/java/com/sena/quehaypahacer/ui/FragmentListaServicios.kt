@@ -1,5 +1,7 @@
 package com.sena.quehaypahacer.ui
 
+import android.app.Activity
+import android.content.Intent.getIntent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,8 +20,10 @@ class FragmentListaServicios : Fragment() {
     private val binding get() = _binding!!
     lateinit var baseDatos: AppBaseDatos
     private var adaptador: AdaptadorServicios = AdaptadorServicios()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -32,11 +36,18 @@ class FragmentListaServicios : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val bundle: Bundle?=  getIntent("").extras
+        val idFk = bundle?.getInt("idPublicacionFK")
+        val id = bundle?.getInt("id")
         baseDatos = Room.databaseBuilder(view.context, AppBaseDatos::class.java, AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().build()
         binding.rvListaServicios.setHasFixedSize(true)
         binding.rvListaServicios.layoutManager = LinearLayoutManager(view.context)
-        adaptador.AdaptadorServicios(baseDatos.serviciosDao.buscarServicios(), view.context)
-        binding.rvListaServicios.adapter = adaptador
+        if(id == idFk){
+            adaptador.AdaptadorServicios(baseDatos.serviciosDao.buscarServiciosId(idFk!!), view.context)
+            binding.rvListaServicios.adapter = adaptador
+        }
+
+
     }
 
 }
