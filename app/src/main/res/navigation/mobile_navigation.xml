@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.sena.quehaypahacer.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_acercade"
+            app:destination="@id/navigation_acercade" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_login"
@@ -41,5 +45,10 @@
         android:name="com.sena.quehaypahacer.ui.historial.FragmentHistorial"
         android:label="Historial"
         tools:layout="@layout/fragment_historial" />
+    <fragment
+        android:id="@+id/navigation_acercade"
+        android:name="com.sena.quehaypahacer.ui.acercade.FragmentAcercaDe"
+        android:label="fragment_acerca_de"
+        tools:layout="@layout/fragment_acerca_de" />
 
 </navigation>

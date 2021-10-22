@@ -3,6 +3,7 @@ package com.sena.quehaypahacer.ui.viewObject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -19,6 +20,7 @@ import com.sena.quehaypahacer.adaptadores.AdapterHistorial
 import com.sena.quehaypahacer.bd.AppBaseDatos
 import com.sena.quehaypahacer.bd.entitys.Historial
 import com.sena.quehaypahacer.ui.ControladorImagenHistorial
+import com.sena.quehaypahacer.ui.FragmentListaServicios
 import com.sena.quehaypahacer.ui.information.ContactFragment
 import com.sena.quehaypahacer.ui.information.InformationObjectFragment
 import com.sena.quehaypahacer.ui.information.MapActivity
@@ -30,8 +32,9 @@ class ViewObjectActivity : AppCompatActivity() {
     lateinit var buttonContact:Button
     lateinit var descripcions:TextView
     lateinit var imagens:ImageView
+    var id:Int=0
+    lateinit var fragmentListaServicios: FragmentListaServicios
     lateinit var nombre:TextView
-    var fragmentInformation = InformationObjectFragment()
     var fragmentContact = ContactFragment()
     lateinit var baseDatos: AppBaseDatos
     private var adaptador: AdapterHistorial = AdapterHistorial()
@@ -61,6 +64,9 @@ class ViewObjectActivity : AppCompatActivity() {
         val nombres = bundle!!.getString("nombre")
         val descripciones = bundle.getString("descripcion")
         val imagen = bundle.getInt("imagenId")
+         id = bundle.getInt("id")
+        Log.e("inof","$id")
+
         val imagenUri = ControladorImagenPubli.getImagenes(this, imagen.toLong())
         nombre.text = nombres
         descripcions.text = descripciones
@@ -91,7 +97,9 @@ class ViewObjectActivity : AppCompatActivity() {
     }
     fun onClick(view:View) {
         when (view.getId()) {
-             R.id.buttonServices ->replaceFragment(fragmentInformation)
+             R.id.buttonServices ->{
+                 fragmentListaServicios= FragmentListaServicios(id)
+                 replaceFragment(fragmentListaServicios)}
             R.id.buttonContant->getViewObject()
         }
     }

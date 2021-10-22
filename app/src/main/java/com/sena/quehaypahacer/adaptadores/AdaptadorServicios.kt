@@ -8,12 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.sena.quehaypahacer.ControladorImagenPubli
 import com.sena.quehaypahacer.ControladorImagenServ
 import com.sena.quehaypahacer.bd.entitys.Servicios
 import com.sena.quehaypahacer.R
+import com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity
 import org.w3c.dom.Text
 import android.content.Intent as Intent
 
@@ -51,6 +53,11 @@ class AdaptadorServicios: RecyclerView.Adapter<AdaptadorServicios.ViewHolder>() 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val lista = listaServicios[position]
         holder.bind(lista, context)
+        holder.itemView.setOnClickListener {
+            val intent: Intent = Intent(holder.itemView.context, ViewObjectActivity::class.java)
+            intent.putExtra("idPublicacionFK", lista.idPublicacionFk)
+            startActivity(context, intent, bundleOf())
+        }
 
     }
 

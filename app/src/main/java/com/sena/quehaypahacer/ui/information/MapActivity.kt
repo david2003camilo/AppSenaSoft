@@ -121,6 +121,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,GPS.OnGPSEventListen
             Toast.makeText(this,"DEBES OPRIMIR EL ICONO QUE SE ENCUENTRA EN LA PARTE INFERIOS DERECHA",Toast.LENGTH_LONG).show()
 
             //hMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(48.893478, 2.334595), 10f))
+            hMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(48.893478, 2.334595), 10f))
 
         }
     }

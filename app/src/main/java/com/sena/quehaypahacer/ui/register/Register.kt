@@ -18,19 +18,23 @@ class Register : AppCompatActivity() {
         setContentView(binding.root)
         baseDatos= Room.databaseBuilder(this, AppBaseDatos::class.java,  AppBaseDatos.DATABASE_NAME).allowMainThreadQueries().build()
         binding.btnRegistrarse.setOnClickListener {
-            val usuario = Usuarios(
-                0,
-                binding.etEmailRe.text.toString(),
-                binding.etPasswordRe.text.toString(),
-                binding.etPassworfReTwo.text.toString(),
-                binding.etUsername.text.toString()
+            if(binding.etEmailRe.text.isEmpty() || binding.etPasswordRe.text.isEmpty() || binding.etPassworfReTwo.text.isEmpty() || binding.etUsername.text.isEmpty()){
+                Toast.makeText(this, "Algun campo esta vacio, porfavor llenarlo", Toast.LENGTH_SHORT).show()
+            }else{
+                val usuario = Usuarios(
+                    0,
+                    binding.etEmailRe.text.toString(),
+                    binding.etPasswordRe.text.toString(),
+                    binding.etPassworfReTwo.text.toString(),
+                    binding.etUsername.text.toString()
                 )
-            baseDatos.usuarioDao.insertarUsuario(usuario)
-            Toast.makeText(this, "Se guardo correctamente", Toast.LENGTH_SHORT).show()
-            binding.etEmailRe.text.clear()
-            binding.etPasswordRe.text.clear()
-            binding.etPassworfReTwo.text.clear()
-            binding.etUsername.text.clear()
+                baseDatos.usuarioDao.insertarUsuario(usuario)
+                Toast.makeText(this, "Se guardo correctamente", Toast.LENGTH_SHORT).show()
+                binding.etEmailRe.text.clear()
+                binding.etPasswordRe.text.clear()
+                binding.etPassworfReTwo.text.clear()
+                binding.etUsername.text.clear()
+            }
         }
     }
 
