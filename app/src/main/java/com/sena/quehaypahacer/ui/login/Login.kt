@@ -30,7 +30,6 @@ import com.huawei.hms.support.account.service.AccountAuthService
 
 class Login : AppCompatActivity() {
     lateinit var binding: ActivityLoginBinding
-    val url =  "http://192.168.1.63:1406/"
     private val REQUEST_CODE_SIGN_IN = 1000
     private val TAG = "Account"
     private var mAuthService: AccountAuthService? = null

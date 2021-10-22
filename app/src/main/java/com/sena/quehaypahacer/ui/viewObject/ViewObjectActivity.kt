@@ -56,7 +56,7 @@ class ViewObjectActivity : AppCompatActivity() {
         // Create an ad request to load an ad.
         val adParam = AdParam.Builder().build()
         bannerView!!.loadAd(adParam)
-        /*
+
         val bundle: Bundle?= intent.extras
         val nombres = bundle!!.getString("nombre")
         val descripciones = bundle.getString("descripcion")
@@ -80,7 +80,6 @@ class ViewObjectActivity : AppCompatActivity() {
             }
         }
 
-         */
     }
     private fun replaceFragment(fragment: Fragment){
         if(fragment!=null){
