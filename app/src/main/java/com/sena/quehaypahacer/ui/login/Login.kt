@@ -42,7 +42,6 @@ class Login : AppCompatActivity() {
         binding.tvRegistrarse.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
-            finish()
         }
         binding.btnIngresar.setOnClickListener {
             binding.idLoadingPB.visibility =View.VISIBLE

@@ -14,13 +14,13 @@
     <fragment
         android:id="@+id/navigation_login"
         android:name="com.sena.quehaypahacer.ui.insertar.FragmentInsertar"
-        android:label="@string/title_login"
+        android:label="Insertar"
         tools:layout="@layout/fragment_insertar" >
     </fragment>
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.sena.quehaypahacer.ui.buscador.FragmentBuscador"
-        android:label="fragment_view_object"
+        android:label="Publicaciones"
         tools:layout="@layout/fragment_buscador" >
         <action
             android:id="@+id/action_navigation_search_to_viewObjectActivity2"
@@ -29,7 +29,7 @@
     <activity
         android:id="@+id/viewObjectActivity2"
         android:name="com.sena.quehaypahacer.ui.viewObject.ViewObjectActivity"
-        android:label="activity_view_object"
+        android:label="Informacion"
         tools:layout="@layout/activity_view_object" />
     <activity
         android:id="@+id/login"
@@ -39,6 +39,7 @@
     <fragment
         android:id="@+id/fragmentHistorial"
         android:name="com.sena.quehaypahacer.ui.historial.FragmentHistorial"
-        android:label="fragment_historial"
+        android:label="Historial"
         tools:layout="@layout/fragment_historial" />
+
 </navigation>

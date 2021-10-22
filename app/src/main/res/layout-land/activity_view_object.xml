@@ -7,10 +7,12 @@
     xmlns:hwads="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".ui.viewObject.ViewObjectActivity">
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
+        android:layout_marginEnd="428dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -21,16 +23,16 @@
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            app:cardCornerRadius="10dp"
-            >
+            app:cardCornerRadius="10dp">
 
             <ImageView
-                android:layout_marginTop="10dp"
                 android:id="@+id/ivLogoVi"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="252dp"
+                android:layout_height="172dp"
+                android:layout_marginTop="10dp"
                 android:src="@mipmap/ic_launcher" />
             <!-- TODO: Update blank fragment layout -->
+
             <TextView
                 android:id="@+id/tittle_object"
                 android:layout_width="match_parent"
@@ -47,74 +49,93 @@
 
             <TextView
                 android:id="@+id/tvDescripcionVi"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="246dp"
+                android:layout_height="118dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="280dp"
                 android:layout_marginRight="10dp"
                 android:text="Esta es una pequeña descripcion" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="480dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <Button
-                    android:onClick="onClick"
-                    android:id="@+id/buttonServices"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="2dp"
-                    app:cornerRadius="20dp"
-                    android:text="Servicios" />
-
-                <Button
-                    android:id="@+id/buttonContant"
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:onClick="onClick"
-                    app:cornerRadius="20dp"
-                    android:text="Contactos" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="560dp"
-                android:id="@+id/layoutLinera"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <fragment
-                    android:id="@+id/fragments_replace"
-                    android:name="com.sena.quehaypahacer.ui.FragmentListaServicios"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    />
-
-                <Button
-                    android:id="@+id/btnAgregar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Agregar"
-
-                    />
-                <com.huawei.hms.ads.banner.BannerView
-                    android:id="@+id/hw_banner_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    hwads:adId="testw6vs28auh3"
-                    hwads:bannerSize="BANNER_SIZE_360_57" />
-                    app:cornerRadius="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="426dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043">
+
+        <Button
+            android:id="@+id/buttonServices"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:onClick="onClick"
+            android:text="Servicios"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/buttonContant"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:onClick="onClick"
+            android:text="Contactos"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="426dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/layoutLinera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragments_replace"
+                android:name="com.sena.quehaypahacer.ui.FragmentListaServicios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnAgregar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Agregar"
+
+                />
+
+            <com.huawei.hms.ads.banner.BannerView
+                android:id="@+id/hw_banner_view"
+                android:layout_width="426dp"
+                android:layout_height="wrap_content"
+                hwads:adId="testw6vs28auh3"
+                hwads:bannerSize="BANNER_SIZE_360_57" />
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

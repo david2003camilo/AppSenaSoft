@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.acercade.FragmentAcercaDe">
+    tools:context=".ui.acercade.FragmentAcercaDe" >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desarrolladores"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="55dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regional Quindio"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="196dp"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="185dp"
+        android:layout_height="126dp"
+        android:text="Bra"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="198dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

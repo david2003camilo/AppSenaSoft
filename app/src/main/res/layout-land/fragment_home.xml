@@ -9,28 +9,28 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="220dp"
-        android:layout_height="135dp"
+        android:layout_width="237dp"
+        android:layout_height="159dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862"
-        app:srcCompat="@drawable/logo"
+        app:layout_constraintVertical_bias="0.936"
+        app:srcCompat="@drawable/logodos"
         tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="196dp"
         android:gravity="center"
         android:text="Quehaypahacer?, es una App que le permitira al usuario en encontrar cosas que hacer en cualquier momento cuando este lo necesite."
-        android:textSize="17sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.988" />
+        app:layout_constraintVertical_bias="0.972" />
 </androidx.constraintlayout.widget.ConstraintLayout>

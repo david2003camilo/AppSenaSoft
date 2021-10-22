@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="30dp"
+    android:layout_marginLeft="170dp"
     android:layout_marginTop="20dp"
-    android:layout_marginRight="30dp">
+    android:layout_marginRight="170dp">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,10 +30,10 @@
             android:id="@+id/tvNombreRe"
             android:layout_width="150dp"
             android:layout_height="25dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="56dp"
             android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.895"
+            app:layout_constraintHorizontal_bias="0.932"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
@@ -45,10 +46,10 @@
             android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.965"
+            app:layout_constraintHorizontal_bias="0.933"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNombreRe"
-            app:layout_constraintVertical_bias="0.522"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreVis"
+            app:layout_constraintVertical_bias="0.525"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -59,7 +60,7 @@
             android:textColor="#FF5B03"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.606"
+            app:layout_constraintHorizontal_bias="0.701"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.138" />
@@ -74,7 +75,8 @@
             android:textColor="#FF5B03"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivImagen"
+            app:layout_constraintHorizontal_bias="0.888"
+            app:layout_constraintStart_toEndOf="@+id/ivImagenRe"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.502" />
     </androidx.constraintlayout.widget.ConstraintLayout>
